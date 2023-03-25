@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  web1:
+    build: "./web/reqhead"
+    ports:
+      - "1001:5000"
+  web2:
+    build: "./web/robots"
+    ports:
+      - "1002:5000"
+  web3:
+    build: "./web/bypassme"
+    ports:
+      - "1003:5000"
+  web4:
+    build: "./web/inspector"
+    ports:
+      - "1004:5000"
+  misc1:
+    build: "./misc/Fair Trade"
+    env_file: "./misc/Fair Trade/.env"
+    ports:
+      - "2001:5000"
