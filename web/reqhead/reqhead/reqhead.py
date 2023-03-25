@@ -8,7 +8,7 @@ def noindex():
     print(request.base_url)
     if request.headers.get("user-agent") != "PuPuBrowser":
         return Response(
-            response="Sorry, Only users using a special browser named GammaBrowser are allowed.",
+            response="Sorry, Only users using a special browser named PuPuBrowser are allowed.",
             status=200,
             mimetype="text/plain",
         )
