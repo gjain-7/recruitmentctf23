@@ -13,7 +13,7 @@ def noindex():
             mimetype="text/plain",
         )
     
-    if request.headers.get("referer") != "request.base_url":
+    if request.headers.get("referer") != request.base_url:
         return Response(
             response="Users visiting from another site are not trusted.",
             status=200,
