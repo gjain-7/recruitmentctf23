@@ -23,7 +23,7 @@ def a37ls():
     admin = request.cookies.get("admin")
     if admin == "1":
         return render_template(
-            "Where are the robots.html", flag=os.environ.get("FLAG1")
+            "Where are the robots.html", flag=os.environ.get("FLAG")
         )
     else:
         resp = make_response(render_template("NotAdmin.html"))

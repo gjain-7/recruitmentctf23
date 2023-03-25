@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #a18b8b;
   }
   
   body {
@@ -33,7 +34,7 @@
   }
   
   #hero {
-    background-image: url('hero.jpg');
+    background-image: url('https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-size: cover;
     /* _W3B */
     background-position: center;
