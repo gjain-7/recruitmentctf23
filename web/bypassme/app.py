@@ -17,11 +17,12 @@ def login_post():
     username = request.form['username']
     password = request.form['password']
 
+    app.logger.info(username, password)
+
     query ="SELECT * FROM users WHERE username='" + username + "' and password='" + password + "'"
-    print(query)
     with connection_context() as cur:
-        cur.execute(query)
         try:
+            cur.execute(query)
             user = cur.fetchone()
             print(user)
         except:
@@ -39,6 +40,4 @@ def logout():
     return redirect('/')
 
 if __name__ == '__main__':
-    start_database()
-    app.run(port=5000, debug=True)
-
+    app.run(port=5000)

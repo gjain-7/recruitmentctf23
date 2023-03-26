@@ -20,7 +20,7 @@ def noindex():
             mimetype="text/plain",
         )
     
-    if request.headers.get("DNT") == "1":
+    if request.headers.get("DNT") != "1":
         return Response(
             response="User who are being tracked not allowed.",
             status=200,

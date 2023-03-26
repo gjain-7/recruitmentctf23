@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS users (
 """
 
 USER_DATA = [
-    User(1, username="admin", password=''.join(random.choices(string.ascii_uppercase + string.digits, k=12))),
-    User(2, username="guest", password="guest123"),
+    User(1, username="guest", password="guest123"),
+    User(2, username="admin", password=''.join(random.choices(string.ascii_uppercase + string.digits, k=12))),
 ]
 
 def start_database():
